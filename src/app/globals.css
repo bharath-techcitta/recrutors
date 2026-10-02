@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F7F6F2;
+  --foreground: #1D2521;
+  --navbar: #F7F6F2;
+  --heading: #1D2521;
+  --text-muted: #68716C;
+  --primary: #164A3A;
+  --primary-hover: #0F382C;
+  --accent: #C9785C;
+  --card: #FFFFFF;
+  --card-border: #D9D7D0;
+  --sidebar: #F2F0EA;
+  --sidebar-border: #D9D7D0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F6F2;
+  color: #1D2521;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Monospace font class for scores and technical badges */
+.font-mono-numbers {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Subtle warm ambient glow */
+.v0-ambient-glow {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 120, 92, 0.06), transparent 70%);
+}
+
+/* Custom Scrollbar for linen theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D7D0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C4C1B8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
